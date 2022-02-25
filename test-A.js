@@ -3,6 +3,7 @@
 function findOppositeNumber(n, firstNumber) {
 	return (n / 2 + firstNumber) % n;
 }
+findOppositeNumber(10, 2)
 
 //A2
 
