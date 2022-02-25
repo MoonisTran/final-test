@@ -21,14 +21,31 @@
         color: white;
         padding: 3px;
       }
+
+      .myDiv {
+      border: 2px outset;
+      background-image: url("https://st3.depositphotos.com/1592314/15511/i/1600/depositphotos_155112150-stock-photo-abstract-acrylic-color-background-stone.jpg");
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      margin-left: auto; 
+      margin-top: 80px; 
+      margin-right: auto;
+      width:500px;
+      }  
+
+      .myBody {
+      background-image: url("https://scontent.fsgn8-1.fna.fbcdn.net/v/t39.30808-6/274021830_3212565145631092_8237335181878367855_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=3TMj5e8kp4sAX9mto52&_nc_ht=scontent.fsgn8-1.fna&oh=00_AT9Nil91Yq-iMysC7eeT8ft7kFva93LeRDxGNpBoeXeP5w&oe=621D2A87");
+      text-align: center;
+      }  
     </style>
   </head>
 
-  <body>
+  <body class="myBody">
+    <div class="myDiv">
     <h1>Đoán số ngẫu nhiên</h1>
 
-    <p>Trong đầu mình đang nghĩ 1 con số. Thuộc khoảng từ 1 đến 10 
-        Bạn có đoán được không?</br> Bạn có 3 lượt đoán</p>
+    <p>Trong đầu mình đang nghĩ 1 con số.</br> </br>Thuộc khoảng từ 1 đến 10 </br></br> 
+        Bạn có đoán được không?</br></br> Bạn có 3 lượt đoán</p>
 
     <div class="form">
       <label for="guessField">Đoán số: </label><input type="text" id="guessField" class="guessField">
@@ -61,7 +78,7 @@
 
         if (userGuess === randomNumber) {
           lastResult.textContent = 'YAY!! Hai đứa minh thật là tâm linh tương thông! Cưới nhau đê!';
-          lastResult.style.backgroundColor = 'green';
+          lastResult.style.color = 'green';
           lowOrHi.textContent = '';
           setGameOver();
         } else if (guessCount === 3) {
@@ -70,7 +87,7 @@
           setGameOver();
         } else {
           lastResult.textContent = 'Sai!';
-          lastResult.style.backgroundColor = 'red';
+          lastResult.style.color = 'red';
           if(userGuess < randomNumber) {
             lowOrHi.textContent = 'Số bạn đoán hơi thấp!' ;
           } else if(userGuess > randomNumber) {
@@ -110,5 +127,6 @@
         randomNumber = Math.floor(Math.random() * 10) + 1;
       }
     </script>
+    </div>
   </body>
 </html>
